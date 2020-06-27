@@ -16,7 +16,7 @@ function generatePassword() {
 
     var uppercase = confirm("Click Ok to include uppercase letters.");
 
-    document.getElementById(“password”).textContent = “aRandomPassword”;
+    document.getElementById("password").textContent = "aRandomPassword";
 
 
 }
