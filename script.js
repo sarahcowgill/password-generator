@@ -16,6 +16,42 @@ function generatePassword() {
 
     var uppercase = confirm("Click Ok to include uppercase letters.");
 
+    if (!special && !numeric && !lowercase && !uppercase) {
+        alert("Please select at least one password character class.");
+        return;
+    }
+    var passwordChars = ""
+    var specialChars = " !\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
+    if (special) {
+        passwordChars = passwordChars + specialChars;
+    }
+    var numericChars = "0123456789";
+    if (numeric) {
+        passwordChars = passwordChars + numericChars; 
+    }
+    var lowerCaseChars = "abcdefghijklmnopqrstuvwxyz";
+    if (lowercase) {
+        passwordChars = passwordChars + lowerCaseChars; 
+    }
+    var upperCaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    if (uppercase) {
+        passwordChars = passwordChars + upperCaseChars; 
+    }
+
+    var aRandomPassword = ""
+
+    var numPasswordChars = "passwordChars.length"
+    
+
+    var passwordSettings = {
+        "number": number,
+        "special": special,
+        "numeric": numeric,
+        "lowercase": lowercase,
+        "uppercase": uppercase
+    };
+    console.log(passwordSettings);
+
     document.getElementById("password").textContent = "aRandomPassword";
 
 
