@@ -15,6 +15,16 @@ function generatePassword() {
     var lowercase = confirm("Click Ok to include lowercase letters.");
 
     var uppercase = confirm("Click Ok to include uppercase letters.");
+   
+    var passwordSettings = {
+        "number": number,
+        "special": special,
+        "numeric": numeric,
+        "lowercase": lowercase,
+        "uppercase": uppercase
+    };
+    console.log(passwordSettings);
+
 
     if (!special && !numeric && !lowercase && !uppercase) {
         alert("Please select at least one password character class.");
@@ -43,15 +53,7 @@ function generatePassword() {
     var numPasswordChars = "passwordChars.length"
     
 
-    var passwordSettings = {
-        "number": number,
-        "special": special,
-        "numeric": numeric,
-        "lowercase": lowercase,
-        "uppercase": uppercase
-    };
-    console.log(passwordSettings);
-
+    
     document.getElementById("password").textContent = "aRandomPassword";
 
 
