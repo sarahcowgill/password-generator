@@ -15,7 +15,7 @@ function generatePassword() {
     var lowercase = confirm("Click Ok to include lowercase letters.");
 
     var uppercase = confirm("Click Ok to include uppercase letters.");
-   
+
     var passwordSettings = {
         "number": number,
         "special": special,
@@ -37,24 +37,29 @@ function generatePassword() {
     }
     var numericChars = "0123456789";
     if (numeric) {
-        passwordChars = passwordChars + numericChars; 
+        passwordChars = passwordChars + numericChars;
     }
     var lowerCaseChars = "abcdefghijklmnopqrstuvwxyz";
     if (lowercase) {
-        passwordChars = passwordChars + lowerCaseChars; 
+        passwordChars = passwordChars + lowerCaseChars;
     }
     var upperCaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     if (uppercase) {
-        passwordChars = passwordChars + upperCaseChars; 
+        passwordChars = passwordChars + upperCaseChars;
     }
 
-    var aRandomPassword = ""
+    var aRandomPassword = 
 
-    var numPasswordChars = "passwordChars.length"
-    
+    var numPasswordChars = "passwordChars.length";
 
-    
-    document.getElementById("password").textContent = "aRandomPassword";
+    for (i = 0; i < number; i++) {
+        var randomPosition = Math.floor(Math.random() * numPasswordChars);
+        var randomCharacter = passwordChars.charAt(randomPosition);
+        aRandomPassword = aRandomPassword + randomCharacter;
+    }
+
+
+    document.getElementById("password").textContent = aRandomPassword;
 
 
 }
