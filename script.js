@@ -1,3 +1,4 @@
+
 function generatePassword() {
     var number = prompt("How many characters would you like your password to contain?");
     if (number < 8) {
@@ -48,9 +49,9 @@ function generatePassword() {
         passwordChars = passwordChars + upperCaseChars;
     }
 
-    var aRandomPassword = 
+    var aRandomPassword = "";
 
-    var numPasswordChars = "passwordChars.length";
+    var numPasswordChars = passwordChars.length;
 
     for (i = 0; i < number; i++) {
         var randomPosition = Math.floor(Math.random() * numPasswordChars);
